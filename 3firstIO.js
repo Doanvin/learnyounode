@@ -9,15 +9,11 @@ const fs = require('fs');
 
 const dirName = process.argv[2];
 let newLines = 0;
-
-fs.readFileSync(dirName);
-
-const buf = process.argv[3];
-
+const buf = fs.readFileSync(dirName);
 const str = buf.toString();
 const strArr = str.split('\n');
 
-for (let i = 0; i < strArr.length; i++) {
+for (let i = 1; i < strArr.length; i++) {
   newLines += 1;
 }
 
