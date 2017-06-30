@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/Doanvin/learnyounode/issues"
   },
-  "homepage": "https://github.com/Doanvin/learnyounode#readme"
+  "homepage": "https://github.com/Doanvin/learnyounode#readme",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.6.1"
+  },
+  "dependencies": {
+    "babel": "^6.23.0"
+  }
 }
