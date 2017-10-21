@@ -13,8 +13,8 @@ const buf = fs.readFileSync(dirName);
 const str = buf.toString();
 const strArr = str.split('\n');
 
-for (let i = 1; i < strArr.length; i++) {
-  newLines += 1;
-}
+newLines = strArr.length - 1;
 
 console.log(newLines);
+
+// fs.readFileSync(process.argv[2], 'utf8').split('\n').length - 1

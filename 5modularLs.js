@@ -12,14 +12,15 @@ const path = require('path');
  * @return {Array} Array of file names {String} filtered by extension.
  */
 module.exports = function filterLS(folder, extension, callback) {
-  const ext = '.' + extension.toLowerCase();
+    const ext = `.${extension.toLowerCase()}`;
 
-  fs.readdir(folder, (err, ls) => {
-    if (err) return callback(err);
-    const arr = ls.filter((file) => {
-      if (path.extname(file) === ext) return file;
+    fs.readdir(folder, (err, ls) => {
+        if (err) return callback(err);
+
+        const arr = ls.filter((file) => {
+            if (path.extname(file) === ext) return file;
+        });
+
+        callback(null, arr);
     });
-    callback(null, arr);
-  });
 };
-
